@@ -3,6 +3,7 @@ A file sharer of some sort built in Flask and jQuery
 
 # Dependencies
 - jQuery, jQuery Fileupload, jQuery Knob
+- Python Flask
 
 # Installation
 
