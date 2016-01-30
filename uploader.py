@@ -3,7 +3,7 @@ import json
 import re
 import sys, getopt
 
-url = 'http://e7a9642d.ngrok.io/api/upload'
+url = 'http://example.com/api/upload'
 
 def main(argv):
     try:
