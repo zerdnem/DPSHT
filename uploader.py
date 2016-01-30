@@ -3,11 +3,11 @@ import json
 import re
 import sys, getopt
 
-url = 'http://example.com/api/upload'
+url = 'http://127.0.0.1:8666/api/upload'
 
 def main(argv):
     try:
-        opts, args = getopt.getopt(argv,"hf:",["file="])
+        opts, args = getopt.getopt(argv,"hf:",["help", "file="])
     except getopt.GetoptError:
         print 'uploader.py -f <FILE>'
         sys.exit(2)
@@ -18,8 +18,6 @@ def main(argv):
             sys.exit()
         elif opt in ("-f", "--file"):
             inputfile = arg
-            print inputfile
-        try:
             file = {'file': open(inputfile, 'rb')}
             r = requests.post(url, files=file)
             c = json.loads(r.text)
@@ -36,8 +34,6 @@ def main(argv):
                 if re.search(pattern, str(c)):
                     z = x['url']
                     print 'File uploaded: ' + z
-        except:
-            print 'File doesn\'t exists!'
 
 
 if __name__ == "__main__":
