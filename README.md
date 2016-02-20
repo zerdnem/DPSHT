@@ -19,5 +19,5 @@ A file sharer of some sort built in Flask and jQuery
 - Run docker-compose up
 
 
-# Demo
+# Screenshot
 ![dpsht](https://raw.githubusercontent.com/zerdnem/DPSHT/master/demo.png)
